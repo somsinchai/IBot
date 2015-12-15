@@ -1,0 +1,34 @@
+#######################################
+# Syntax Coloring Map For IBot library
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+I_Sensor	KEYWORD1
+I_Motor		KEYWORD1
+I_Ultra_Sonic 	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+begin	KEYWORD2
+end	KEYWORD2
+read	KEYWORD2
+speed	KEYWORD2
+break	KEYWORD2
+read_cm	KEYWORD2
+read_inch	KEYWORD2
+
+#######################################
+# Instances (KEYWORD2)
+#######################################
+
+IBot	KEYWORD2
+IBot.h	KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################
