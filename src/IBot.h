@@ -7,11 +7,13 @@
 
 class I_Motor{
 private:
+	
+	char motor_number;
 	int in1;
 	int in2;
-	int en;
 	
 public:
+	static char motor_count;
 	I_Motor(int _in1,int _in2,int _en);
 	void speed(int num);
 	void stop();
