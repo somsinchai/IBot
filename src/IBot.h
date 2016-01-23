@@ -5,6 +5,17 @@
 
 #include "Arduino.h"
 
+class I_Sensor{
+private:
+	int *s_pos;
+	int s_count;
+
+public:
+	I_Sensor(int s_cnt,...);
+	int read(int num);
+
+};
+
 class I_Motor{
 private:
 	

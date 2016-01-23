@@ -5,6 +5,26 @@
 volatile int en2[2];
 char I_Motor::motor_count = 0;
 
+I_Sensor::I_Sensor(int s_cnt,...){
+
+	s_count = s_cnt;
+	va_list arguments;
+	va_start ( arguments, s_cnt );
+	s_pos = new int[s_cnt];
+
+	for(int i=0;i<s_cnt;i++){
+		s_pos[i] = va_arg ( arguments, int );
+		pinMode(s_pos[i],INPUT);
+	}
+	va_end ( arguments );
+
+}
+
+int I_Sensor::read(int num){
+	//if(num<0 || num>s_count-1)//  * fatal   = "invalid sensor number";   //* type = code ?  code < 0 ? fatal : warning : success;  
+	return analogRead(s_pos[num]);
+}
+
 I_Motor::I_Motor(int _in1,int _in2,int _en){
 	in1 = _in1;
 	in2 = _in2;
@@ -29,7 +49,7 @@ I_Motor::I_Motor(int _in1,int _in2,int _en){
 		en2[1] = _en;
 	}
 	else{
-		#warning  ("fuck it exceed the Limit the number of motor bitch!");
+		//#warning  ("fuck it exceed the Limit the number of motor bitch!");
 	}
 }
 
