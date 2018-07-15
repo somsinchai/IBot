@@ -7,8 +7,8 @@
 #######################################
 
 I_Sensor	KEYWORD1
-I_Motor		KEYWORD1
-I_Ultra_Sonic 	KEYWORD1
+I_Motor	KEYWORD1
+I_Ultra_Sonic	KEYWORD1
 
 #######################################
 # Methods and Functions (KEYWORD2)
